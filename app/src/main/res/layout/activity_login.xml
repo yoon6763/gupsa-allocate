@@ -70,6 +70,7 @@
         android:layout_marginBottom="20sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#0075FF"
@@ -80,7 +81,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#280075FF"
