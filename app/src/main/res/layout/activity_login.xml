@@ -71,15 +71,16 @@
         android:inputType="textPassword" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
         style="@style/BtnMainSemi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20sp"
         android:gravity="center"
-        android:text="로그인"/>
+        android:text="로그인" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        android:id="@+id/btn_register"
         style="@style/BtnLightSemi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
