@@ -1,4 +1,5 @@
-package com.example.myapplication;
+package com.gupsa.allocate;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -6,22 +7,22 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
-    protected void onCreate(Bundle savedInstanceStare){
+    protected void onCreate(Bundle savedInstanceStare) {
         super.onCreate(savedInstanceStare);
         setContentView(R.layout.activity_splash);
 
-        Handler handler=new Handler();
+        Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
-        },1000);
+        }, 1000);
     }
 
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         finish();
     }

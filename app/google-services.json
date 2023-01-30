@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "771768930674",
+    "project_id": "allocate-c319d",
+    "storage_bucket": "allocate-c319d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771768930674:android:d8881f0cec1dffc2164deb",
+        "android_client_info": {
+          "package_name": "com.gupsa.allocate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771768930674-i3i8v2r52qo2ca722t9vau4k2k9u3sr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gupsa.allocate",
+            "certificate_hash": "439c5698ce4d203bd8c429e8b934823dfa635fb6"
+          }
+        },
+        {
+          "client_id": "771768930674-stco96e28kacfq2dotdo3novb2mmojui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTqGtefz6swJUtL7OWwRjf5gFlL_YCZzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771768930674-stco96e28kacfq2dotdo3novb2mmojui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
