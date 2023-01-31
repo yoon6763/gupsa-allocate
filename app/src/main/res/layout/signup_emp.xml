@@ -9,18 +9,142 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="20sp">
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_arrow_signup"
             android:layout_width="30sp"
             android:layout_height="30sp"
-            android:background="@drawable/arrow_back_black"
-            android:layout_margin="10sp" />
+            android:background="@drawable/arrow_back_black"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="직원 계정 회원가입"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="3sp"
+            android:layout_marginLeft="5sp"/>
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="25sp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="직원정보"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="20sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:inputType="textPersonName"
+                android:hint="이름을 입력해주세요"
+                android:textSize="15sp"
+                android:background="@drawable/edittext_rounded"
+                android:layout_marginTop="5sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="휴대전화 번호"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="20sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:inputType="textPersonName"
+                android:hint="휴대전화 번호를 '-'없이 입력해주세요"
+                android:textSize="15sp"
+                android:background="@drawable/edittext_rounded"
+                android:layout_marginTop="5sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이메일"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="20sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="275sp"
+                    android:layout_height="50sp"
+                    android:inputType="textPersonName"
+                    android:hint="이메일을 입력해주세요"
+                    android:textSize="15sp"
+                    android:background="@drawable/edittext_rounded"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignParentLeft="true"/>
+                <Button
+                    android:layout_width="80sp"
+                    android:layout_height="60sp"
+                    android:text="인증번호 발송"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="275sp"
+                    android:layout_height="50sp"
+                    android:inputType="textPersonName"
+                    android:hint="인증코드를 입력해주세요"
+                    android:textSize="15sp"
+                    android:background="@drawable/edittext_rounded"
+                    android:layout_marginTop="5sp"
+                    android:layout_alignParentLeft="true"/>
+                <Button
+                    android:layout_width="80sp"
+                    android:layout_height="60sp"
+                    android:text="인증번호 확인"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="휴대전화 번호"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10sp"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>
