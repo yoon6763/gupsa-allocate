@@ -10,10 +10,11 @@ import com.gupsa.allocate.adminPage.AdmBoardFragment;
 import com.gupsa.allocate.adminPage.AdmHomeFragment;
 import com.gupsa.allocate.adminPage.AdmMypageFragment;
 import com.gupsa.allocate.databinding.ActivityMainBinding;
+import com.gupsa.allocate.employeePage.EmpBoardFragment;
 import com.gupsa.allocate.employeePage.EmpHomeFragment;
+import com.gupsa.allocate.employeePage.EmpMypageFragment;
 import com.gupsa.allocate.utils.Constants;
 import com.gupsa.allocate.utils.UserType;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -62,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_board:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new AdmBoardFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new EmpBoardFragment()).commit();
                         return true;
 
                     case R.id.nav_my_page:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new AdmMypageFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new EmpMypageFragment()).commit();
                         return true;
                 }
                 return false;
