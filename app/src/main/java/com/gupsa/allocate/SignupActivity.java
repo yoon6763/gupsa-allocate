@@ -28,5 +28,11 @@ public class SignupActivity extends AppCompatActivity {
             intent.putExtra(Constants.INTENT_EXTRA_USER_TYPE, UserType.EMPLOYEE);
             startActivity(intent);
         });
+
+        binding.btnEmpSignup.setOnClickListener(v -> {
+            Intent intent = new Intent(SignupActivity.this, SignupEmpActivity.class);
+            intent.putExtra(Constants.INTENT_EXTRA_USER_TYPE, UserType.EMPLOYEE);
+            startActivity(intent);
+        });
     }
 }

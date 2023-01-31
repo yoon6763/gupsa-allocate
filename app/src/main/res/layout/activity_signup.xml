@@ -43,6 +43,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_emp_signup"
             android:layout_width="300sp"
             android:layout_height="210sp"
             android:background="@drawable/round_button"
