@@ -12,7 +12,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/white</item>
-
+        <item name="android:windowLightStatusBar">true</item>
 
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/black</item>
@@ -25,12 +25,15 @@
     <style name="BtnMainSemi" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_main_semi_round</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+
         <!-- 누루면 회색 그림자 효과를 냄 -->
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
 
     <style name="BtnMainSquare" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_main_square</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
@@ -38,16 +41,19 @@
     <style name="BtnMainRound" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_main_round</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
 
     <style name="BtnLightSemi" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_light_semi_round</item>
         <item name="android:textColor">@color/main_color</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
 
     <style name="BtnLightSquare" parent="Widget.AppCompat.Button">
+        <item name="android:textStyle">bold</item>
         <item name="android:background">@drawable/btn_light_square</item>
         <item name="android:textColor">@color/main_color</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
@@ -55,6 +61,7 @@
 
     <style name="BtnLightRound" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_light_round</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/main_color</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
