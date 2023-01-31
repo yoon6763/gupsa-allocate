@@ -10,7 +10,7 @@
 
     <color name="main_color">#0075FF</color>
     <color name="main_color_light">#300075FF</color>
-    <color name="background_color">#EFF4F9</color>
+    <color name="background_color">#F4F5F7</color>
 
     <color name="red">#FF0000</color>
     <color name="red_light">#FFD1D1</color>
