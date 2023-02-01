@@ -1,5 +1,6 @@
 package com.gupsa.allocate
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -50,16 +51,166 @@ class AllocationViewFragment : Fragment() {
 //        String status;
 //        int point;
 //        float weight;
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
-        cardList.add(AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f))
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                Timestamp.now(),
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
+        cardList.add(
+            AllocationModel(
+                "Gupsa",
+                "Gupsa",
+                "Gupsa",
+                "김대리",
+                "01011112222",
+                "경기도 용인시 처인구 xxx",
+                "충청남도 천안시 서북구 xxx",
+                Timestamp.now(),
+                null,
+                "Gupsa",
+                100000,
+                1.0f
+            )
+        )
 
 
         val cardAdapter = CardAdapter(requireContext(), cardList)
@@ -67,7 +218,11 @@ class AllocationViewFragment : Fragment() {
         binding.rvCard.adapter = cardAdapter
         cardAdapter.notifyDataSetChanged()
 
-
+        cardAdapter.onItemClickListener = object : CardAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                startActivity(Intent(context, AllocateDetailActivity::class.java))
+            }
+        }
 
         return binding.root
     }
