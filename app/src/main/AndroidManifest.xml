@@ -12,6 +12,12 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31" >
         <activity
+            android:name=".IdSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IdPwSearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupAdmActivity"
             android:exported="false" />
         <activity
