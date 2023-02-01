@@ -35,5 +35,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        binding.btnSarch.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, IdSearchActivity.class);
+            intent.putExtra(Constants.INTENT_EXTRA_USER_TYPE, UserType.EMPLOYEE);
+            startActivity(intent);
+        });
+
+
+
+
     }
 }
