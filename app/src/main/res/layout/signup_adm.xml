@@ -165,6 +165,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/et_user_name"
                     android:layout_width="match_parent"
                     android:layout_height="50sp"
                     android:layout_marginTop="5sp"
@@ -183,6 +184,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/et_user_phone"
                     android:layout_width="match_parent"
                     android:layout_height="50sp"
                     android:layout_marginTop="5sp"
@@ -192,8 +194,8 @@
                     android:textSize="15sp" />
 
 
-
                 <TextView
+                    android:id="@+id/et_user_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
@@ -228,7 +230,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
 
                     <EditText
                         android:layout_width="275sp"
@@ -321,6 +324,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/et_password1"
                     android:layout_width="match_parent"
                     android:layout_height="50sp"
                     android:layout_marginTop="5sp"
@@ -342,15 +346,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="50sp"
                     android:layout_marginTop="5sp"
-
+                    android:id="@+id/et_password2"
                     android:layout_marginBottom="50sp"
                     android:background="@drawable/edittext_rounded"
                     android:hint="비밀번호를 한번 더 입력해주세요"
                     android:inputType="textPersonName"
                     android:textSize="15sp" />
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
 
@@ -362,8 +364,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50sp"
-            android:text="회원가입"
-            android:background="@drawable/btn_main_square"/>
+            android:background="@drawable/btn_main_square"
+            android:text="회원가입" />
     </LinearLayout>
 
 </LinearLayout>
