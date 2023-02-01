@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/gap_horizontal"
         android:layout_weight="1"
         android:orientation="vertical">
@@ -46,7 +46,7 @@
                     android:drawableLeft="@drawable/ic_compass_resize"
                     android:drawablePadding="@dimen/drawable_padding"
                     android:gravity="center_vertical"
-                    tools:text="충청남도 천안시 서북구" />
+                    android:text="충청남도 천안시 서북구" />
 
                 <View
                     android:layout_width="1dp"
@@ -62,7 +62,7 @@
                     android:drawableLeft="@drawable/ic_flag_resize"
                     android:drawablePadding="@dimen/drawable_padding"
                     android:gravity="center_vertical"
-                    tools:text="충청남도 천안시 동남구" />
+                    android:text="충청남도 천안시 동남구" />
 
             </LinearLayout>
 
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                tools:src="@drawable/ic_night" />
+                android:src="@drawable/ic_night" />
 
         </LinearLayout>
 
@@ -82,8 +82,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/gap_line_double"
             android:drawableLeft="@drawable/ic_weight"
+            android:drawablePadding="@dimen/drawable_padding"
             android:gravity="center_vertical"
-            tools:text="5 톤" />
+            android:text="5 톤" />
 
         <TextView
             android:id="@+id/tv_point"
@@ -103,7 +104,7 @@
             android:drawableLeft="@drawable/ic_calendar"
             android:drawablePadding="@dimen/drawable_padding"
             android:gravity="center_vertical"
-            tools:text="2022년 11월 20일" />
+            android:text="2022년 11월 20일" />
 
         <TextView
             android:id="@+id/tv_time"
@@ -113,7 +114,7 @@
             android:drawableLeft="@drawable/ic_time"
             android:drawablePadding="@dimen/drawable_padding"
             android:gravity="center_vertical"
-            tools:text="14:30 ~" />
+            android:text="14:30 ~" />
 
         <View
             android:layout_width="match_parent"
@@ -132,9 +133,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/gap_line"
+            android:text="Aliexpress"
             android:textSize="@dimen/title_size"
-            android:textStyle="bold"
-            tools:text="Aliexpress" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_client_name"
@@ -144,7 +145,7 @@
             android:drawableLeft="@drawable/ic_person"
             android:drawablePadding="@dimen/drawable_padding"
             android:gravity="center_vertical"
-            tools:text="김대리" />
+            android:text="김대리" />
 
         <TextView
             android:id="@+id/tv_client_phone"
@@ -154,8 +155,140 @@
             android:drawableLeft="@drawable/ic_call"
             android:drawablePadding="@dimen/drawable_padding"
             android:gravity="center_vertical"
-            tools:text="010-1234-5678" />
+            android:text="010-1234-5678" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/gap_vertical"
+            android:background="#20000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상태"
+            android:textStyle="bold" />
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:scaleX="0.8">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginVertical="@dimen/gap_vertical"
+                    android:background="@color/main_color_clear"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_circle" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_circle" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_circle" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_circle" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_circle" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="접수완료/\n승인 대기중"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="승인 완료"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="작업 수행중"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="작업 완료/\n완료 결재 대기중"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="작업 및 결재 완료"
+                android:textSize="8sp" />
+        </LinearLayout>
+    </LinearLayout>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_allocate"
