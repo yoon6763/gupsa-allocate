@@ -16,4 +16,10 @@
 
     <color name="red">#FF0000</color>
     <color name="red_light">#FFD1D1</color>
+
+
+    <color name="purple">#9E00FF</color>
+    <color name="gray">#70000000</color>
+
+    <color name="divider_color">#20000000</color>
 </resources>
