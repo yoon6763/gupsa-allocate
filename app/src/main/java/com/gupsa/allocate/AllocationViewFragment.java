@@ -7,12 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.Timestamp;
 import com.gupsa.allocate.adapter.CardAdapter;
 import com.gupsa.allocate.databinding.FragmentAllocationViewBinding;
 import com.gupsa.allocate.models.AllocationModel;
+import com.gupsa.allocate.utils.StampStatus;
 
 import java.util.ArrayList;
 
@@ -61,9 +63,20 @@ public class AllocationViewFragment extends Fragment {
 
         cardAdapter = new CardAdapter(requireContext(), cardList);
 
+        CardAdapter.OnWorkStatusChangeListener listener = new CardAdapter.OnWorkStatusChangeListener() {
+            @Override
+            public void onWorkStatusChange(int position, @NonNull StampStatus status) {
+                if (status == StampStatus.FINISHED) {
+                    Toast.makeText(requireContext(), "작업 완료", Toast.LENGTH_SHORT).show();
+                } else if (status == StampStatus.WORKING) {
+                    Toast.makeText(requireContext(), "작업 시작", Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+
         binding.rvCard.setAdapter(cardAdapter);
         if (stampEnabled) {
-            setStampView();
+            setStampView(listener);
         }
         cardAdapter.notifyDataSetChanged();
 
@@ -81,17 +94,8 @@ public class AllocationViewFragment extends Fragment {
         this.stampEnabled = stampEnabled;
     }
 
-    private void setStampView() {
+    private void setStampView(CardAdapter.OnWorkStatusChangeListener listener) {
         cardAdapter.setViewStamp(stampEnabled);
-        cardAdapter.setOnWorkFinishListener(new CardAdapter.OnWorkFinishListener() {
-            @Override
-            public void onWorkFinish(int position) {
-//                Toast.makeText(requireContext(), "작업 완료", Toast.LENGTH_SHORT).show();
-//
-//                cardList.add(cardList.remove(position)); // 가장 끝으로 이동
-//                cardAdapter.notifyDataSetChanged();
-
-            }
-        });
+        cardAdapter.setOnWorkFinishListener(listener);
     }
 }

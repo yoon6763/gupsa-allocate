@@ -26,11 +26,11 @@ class CardAdapter(
         fun onItemClick(position: Int)
     }
 
-    interface OnWorkFinishListener {
-        fun onWorkFinish(position: Int)
+    interface OnWorkStatusChangeListener {
+        fun onWorkStatusChange(position: Int, status: StampStatus)
     }
 
-    var onWorkFinishListener: OnWorkFinishListener? = null
+    var onWorkFinishListener: OnWorkStatusChangeListener? = null
     var onItemClickListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -82,12 +82,13 @@ class CardAdapter(
 
             binding.btnStampStart.setOnClickListener {
                 models[adapterPosition].nextStampStatus()
+                onWorkFinishListener?.onWorkStatusChange(adapterPosition, models[adapterPosition].stampStatus)
                 notifyItemChanged(adapterPosition)
             }
 
             binding.btnStampEnd.setOnClickListener {
                 models[adapterPosition].nextStampStatus()
-                onWorkFinishListener?.onWorkFinish(adapterPosition)
+                onWorkFinishListener?.onWorkStatusChange(adapterPosition, models[adapterPosition].stampStatus)
                 notifyItemChanged(adapterPosition)
             }
         }

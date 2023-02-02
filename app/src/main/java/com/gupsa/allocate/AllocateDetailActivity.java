@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.gupsa.allocate.databinding.ActivityAllocateDetailBinding;
 
+import java.util.Random;
+
 public class AllocateDetailActivity extends AppCompatActivity {
 
     ActivityAllocateDetailBinding binding;
@@ -24,8 +26,9 @@ public class AllocateDetailActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbarAllocateDetail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Random rd = new Random();
 
-        int workState = 3;
+        int workState = rd.nextInt(5);
 
         // LinearLayout에 특정 idx의 ImageView를 가져와서 이미지를 변경
         ((ImageView) binding.llStatus.getChildAt(workState)).setImageDrawable(getDrawable(R.drawable.ic_truck_resize));
