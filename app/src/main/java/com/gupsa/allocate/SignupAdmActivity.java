@@ -23,7 +23,7 @@ public class SignupAdmActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.btnArrowSignup.setOnClickListener(v -> {
-            Intent intent = new Intent(SignupAdmActivity.this, LoginActivity.class);
+            Intent intent = new Intent(SignupAdmActivity.this, SignupActivity.class);
             intent.putExtra(Constants.INTENT_EXTRA_USER_TYPE, UserType.EMPLOYEE);
             startActivity(intent);
         });

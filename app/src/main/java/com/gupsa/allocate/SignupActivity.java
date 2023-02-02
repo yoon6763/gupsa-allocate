@@ -40,5 +40,6 @@ public class SignupActivity extends AppCompatActivity {
             intent.putExtra(Constants.INTENT_EXTRA_USER_TYPE, UserType.EMPLOYEE);
             startActivity(intent);
         });
+
     }
 }

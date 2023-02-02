@@ -37,12 +37,10 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         binding.btnSarch.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, IdSearchActivity.class);
+            Intent intent = new Intent(LoginActivity.this, IdPwSearchActivity.class);
             intent.putExtra(Constants.INTENT_EXTRA_USER_TYPE, UserType.EMPLOYEE);
             startActivity(intent);
         });
-
-
 
 
     }
