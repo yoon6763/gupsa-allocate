@@ -7,27 +7,13 @@
     android:orientation="vertical"
     tools:context=".IdPwSearchActivity">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_id_pw_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="20sp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_arrow_signup"
-            android:layout_width="30sp"
-            android:layout_height="30sp"
-            android:background="@drawable/arrow_back_black"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="아이디 / 비밀번호 찾기"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="3sp"
-            android:layout_marginLeft="5sp"/>
-    </LinearLayout>
+        android:background="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="1dp"
+        app:title="아이디 / 비밀번호 찾기" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/search_tl_allocation"
@@ -43,19 +29,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal" />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal">-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal">-->
 
-<!--        <Button-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50sp"-->
-<!--            android:background="@drawable/btn_main_square"-->
-<!--            android:text="아이디 찾기" />-->
-<!--    </LinearLayout>-->
+    <!--        <Button-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50sp"-->
+    <!--            android:background="@drawable/btn_main_square"-->
+    <!--            android:text="아이디 찾기" />-->
+    <!--    </LinearLayout>-->
 
 
 </LinearLayout>

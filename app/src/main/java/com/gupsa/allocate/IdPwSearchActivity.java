@@ -1,10 +1,11 @@
 package com.gupsa.allocate;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import android.content.Intent;
-import android.os.Bundle;
 
 import com.gupsa.allocate.adapter.AllocateViewPagerAdapter;
 import com.gupsa.allocate.databinding.IdPwSearchBinding;
@@ -22,10 +23,10 @@ public class IdPwSearchActivity extends AppCompatActivity {
         binding = IdPwSearchBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btnArrowSignup.setOnClickListener(v -> {
-            Intent intent = new Intent(IdPwSearchActivity.this, LoginActivity.class);
-            startActivity(intent);
-        });
+        // 툴바 뒤로가기 설정
+        setSupportActionBar(binding.toolbarIdPwSearch);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         ArrayList<Fragment> fragments = new ArrayList<>();
         String[] titles = new String[2];
@@ -33,7 +34,7 @@ public class IdPwSearchActivity extends AppCompatActivity {
         titles[1] = "비밀번호 찾기";
 
         for (int i = 0; i < 2; i++) {
-            if(i==0)
+            if (i == 0)
                 fragments.add(new IdSearchPageFragment());
             else
                 fragments.add(new PwSearchPageFragment());
@@ -52,4 +53,12 @@ public class IdPwSearchActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }

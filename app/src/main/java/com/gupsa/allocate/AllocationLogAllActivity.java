@@ -1,7 +1,9 @@
 package com.gupsa.allocate;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gupsa.allocate.adapter.AllocationLogAdapter;
@@ -22,6 +24,10 @@ public class AllocationLogAllActivity extends AppCompatActivity {
         binding = ActivityAllocationLogAllBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // 툴바 뒤로가기 설정
+        setSupportActionBar(binding.toolbarAllocationLogAll);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ArrayList<AllocationLogModel> allocationLogModels = new ArrayList<>();
 
         Random rd = new Random();
@@ -36,5 +42,14 @@ public class AllocationLogAllActivity extends AppCompatActivity {
         AllocationLogAdapter adapter = new AllocationLogAdapter(AllocationLogAllActivity.this, allocationLogModels);
         binding.rvAllocationLogAll.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
