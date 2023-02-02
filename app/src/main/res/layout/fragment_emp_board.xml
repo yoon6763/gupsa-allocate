@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
+    android:orientation="vertical"
     tools:context=".employeePage.EmpBoardFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_card"
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="1dp"
+        app:title="내 배차" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_allocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:foregroundTint="@color/main_color"
+        app:tabIconTint="@color/main_color" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_allocation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_allocation" />
-
-</FrameLayout>
+        android:orientation="horizontal" />
+</LinearLayout>

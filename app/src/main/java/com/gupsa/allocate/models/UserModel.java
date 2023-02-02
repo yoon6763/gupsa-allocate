@@ -1,6 +1,6 @@
 package com.gupsa.allocate.models;
 
-public class User {
+public class UserModel {
     String name;
     String email;
     String phone;

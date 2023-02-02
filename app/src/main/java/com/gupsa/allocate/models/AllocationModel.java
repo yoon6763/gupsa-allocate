@@ -1,8 +1,10 @@
 package com.gupsa.allocate.models;
 
 import com.google.firebase.Timestamp;
+import com.gupsa.allocate.utils.StampStatus;
 
 public class AllocationModel {
+
     String company;
     String employee; // nullable
     String clientCompany;
@@ -15,6 +17,8 @@ public class AllocationModel {
     String status;
     int point;
     float weight;
+
+    StampStatus stampStatus = StampStatus.NONE;
 
     public AllocationModel(String company, String employee, String clientCompany, String clientName, String clientCall, String locationStart, String locationEnd, Timestamp durationStart, Timestamp durationEnd, String status, int point, float weight) {
         this.company = company;
@@ -125,5 +129,28 @@ public class AllocationModel {
 
     public void setWeight(float weight) {
         this.weight = weight;
+    }
+
+    public StampStatus getStampStatus() {
+        return stampStatus;
+    }
+
+    public void setStampStatus(StampStatus stampStatus) {
+        this.stampStatus = stampStatus;
+    }
+
+    public StampStatus nextStampStatus() {
+        switch (stampStatus) {
+            case NONE:
+                stampStatus = StampStatus.WORKING;
+                break;
+            case WORKING:
+                stampStatus = StampStatus.FINISHED;
+                break;
+            case FINISHED:
+                stampStatus = StampStatus.NONE;
+                break;
+        }
+        return stampStatus;
     }
 }

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -16,8 +17,10 @@ import com.gupsa.allocate.models.AllocationModel;
 import java.util.ArrayList;
 
 public class AllocationViewFragment extends Fragment {
-
+    CardAdapter cardAdapter;
+    boolean stampEnabled = false;
     private FragmentAllocationViewBinding binding;
+    private ArrayList<AllocationModel> cardList;
 
     public AllocationViewFragment() {
         // Required empty public constructor
@@ -41,24 +44,27 @@ public class AllocationViewFragment extends Fragment {
 
         binding = FragmentAllocationViewBinding.inflate(inflater, container, false);
 
-        ArrayList<AllocationModel> cardList = new ArrayList<AllocationModel>();
+        cardList = new ArrayList<AllocationModel>();
+        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
+        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
+        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
+        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
+        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
         cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
         cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
         cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
         cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
+        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
         cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
         cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222", "경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
 
 
-        CardAdapter cardAdapter = new CardAdapter(requireContext(), cardList);
+        cardAdapter = new CardAdapter(requireContext(), cardList);
 
         binding.rvCard.setAdapter(cardAdapter);
+        if (stampEnabled) {
+            setStampView();
+        }
         cardAdapter.notifyDataSetChanged();
 
         cardAdapter.setOnItemClickListener(new CardAdapter.OnItemClickListener() {
@@ -69,5 +75,23 @@ public class AllocationViewFragment extends Fragment {
         });
 
         return binding.getRoot();
+    }
+
+    public void setEnableStampView(boolean stampEnabled) {
+        this.stampEnabled = stampEnabled;
+    }
+
+    private void setStampView() {
+        cardAdapter.setViewStamp(stampEnabled);
+        cardAdapter.setOnWorkFinishListener(new CardAdapter.OnWorkFinishListener() {
+            @Override
+            public void onWorkFinish(int position) {
+//                Toast.makeText(requireContext(), "작업 완료", Toast.LENGTH_SHORT).show();
+//
+//                cardList.add(cardList.remove(position)); // 가장 끝으로 이동
+//                cardAdapter.notifyDataSetChanged();
+
+            }
+        });
     }
 }

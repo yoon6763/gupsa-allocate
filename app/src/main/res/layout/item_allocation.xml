@@ -11,6 +11,7 @@
     app:strokeWidth="1dp">
 
     <FrameLayout
+        android:id="@+id/fl_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/gap_line_double">
@@ -111,6 +112,35 @@
                     android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:src="@drawable/ic_expand" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_stamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_line_double"
+                android:divider="@drawable/empty_divider_vertical_10"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_stamp_start"
+                    style="@style/BtnMainSemi"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_middle_height"
+                    android:layout_weight="1"
+                    android:text="작업 시작하기" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_stamp_end"
+                    style="@style/BtnDisableSemi"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_middle_height"
+                    android:layout_weight="1"
+                    android:text="작업 완료하기" />
+
             </LinearLayout>
 
 

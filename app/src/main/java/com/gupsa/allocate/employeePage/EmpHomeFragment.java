@@ -7,15 +7,20 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.Timestamp;
 import com.gupsa.allocate.AllocationViewFragment;
 import com.gupsa.allocate.adapter.AllocateViewPagerAdapter;
-import com.gupsa.allocate.databinding.FragmentEmpHomeBinding;
+import com.gupsa.allocate.adapter.CardAdapter;
+import com.gupsa.allocate.models.AllocationModel;
 
 import java.util.ArrayList;
 
+import com.gupsa.allocate.databinding.FragmentEmpHomeBinding;
 
 public class EmpHomeFragment extends Fragment {
-    FragmentEmpHomeBinding binding;
+
+    private FragmentEmpHomeBinding binding;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,14 +34,12 @@ public class EmpHomeFragment extends Fragment {
 
         binding = FragmentEmpHomeBinding.inflate(inflater, container, false);
 
-
         ArrayList<Fragment> fragments = new ArrayList<>();
-        String[] titles = new String[3];
-        titles[0] = "승인 전";
-        titles[1] = "승인 완료";
-        titles[2] = "결제 전";
+        String[] titles = new String[2];
+        titles[0] = "단기 일정";
+        titles[1] = "장기 일정";
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             fragments.add(new AllocationViewFragment());
         }
 

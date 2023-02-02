@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gupsa.allocate.R
 import com.gupsa.allocate.databinding.ItemAllocationBinding
 import com.gupsa.allocate.models.AllocationModel
+import com.gupsa.allocate.utils.StampStatus
 import com.gupsa.allocate.utils.ToggleAnimation
 import com.gupsa.allocate.utils.Utils
 
@@ -18,10 +19,18 @@ class CardAdapter(
 ) :
     RecyclerView.Adapter<CardAdapter.Holder>() {
 
+    var viewStamp = false
+    val isExpanded = Array(models.size) { false }
+
     interface OnItemClickListener {
         fun onItemClick(position: Int)
     }
 
+    interface OnWorkFinishListener {
+        fun onWorkFinish(position: Int)
+    }
+
+    var onWorkFinishListener: OnWorkFinishListener? = null
     var onItemClickListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -35,11 +44,7 @@ class CardAdapter(
         holder.binding.run {
             val model = models[position]
 
-            if (holder.isExpanded) {
-                llExpand.visibility = View.VISIBLE
-            } else {
-                llExpand.visibility = View.GONE
-            }
+            if (viewStamp) holder.setStampViewBind()
 
             tvPoint.text = "${Utils.getCommaString(model.point)} P"
             tvLocationStart.text = model.locationStart
@@ -56,7 +61,7 @@ class CardAdapter(
             tvClientCall.text = Utils.getPhoneString(model.clientCall)
             tvClientName.text = model.clientName
 
-
+            llExpand.visibility = if (isExpanded[position]) View.VISIBLE else View.GONE
         }
     }
 
@@ -66,16 +71,24 @@ class CardAdapter(
 
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding = ItemAllocationBinding.bind(itemView)
-        var isExpanded = false
 
         init {
-            itemView.setOnClickListener {
-                onItemClickListener?.onItemClick(adapterPosition)
-            }
+            itemView.setOnClickListener { onItemClickListener?.onItemClick(adapterPosition) }
 
             binding.ivExpand.setOnClickListener {
-                val show = toggleLayout(!isExpanded, it, binding.llExpand)
-                isExpanded = show
+                val show = toggleLayout(!isExpanded[adapterPosition], it, binding.llExpand)
+                isExpanded[adapterPosition] = show
+            }
+
+            binding.btnStampStart.setOnClickListener {
+                models[adapterPosition].nextStampStatus()
+                notifyItemChanged(adapterPosition)
+            }
+
+            binding.btnStampEnd.setOnClickListener {
+                models[adapterPosition].nextStampStatus()
+                onWorkFinishListener?.onWorkFinish(adapterPosition)
+                notifyItemChanged(adapterPosition)
             }
         }
 
@@ -91,6 +104,33 @@ class CardAdapter(
                 ToggleAnimation.collapse(layoutExpand)
             }
             return isExpanded
+        }
+
+        fun setStampViewBind() {
+            when (models[adapterPosition].stampStatus) {
+                StampStatus.NONE -> {
+                    binding.llStamp.visibility = View.VISIBLE
+                    binding.flContainer.setBackgroundColor(context.getColor(R.color.white))
+                    binding.btnStampStart.isEnabled = true
+                    binding.btnStampStart.setBackgroundResource(R.drawable.btn_main_semi_round)
+                    binding.btnStampEnd.isEnabled = false
+                    binding.btnStampEnd.setBackgroundResource(R.drawable.btn_disable_semi_round)
+
+                }
+                StampStatus.WORKING -> {
+                    binding.llStamp.visibility = View.VISIBLE
+                    binding.flContainer.setBackgroundColor(context.getColor(R.color.white))
+                    binding.btnStampStart.isEnabled = false
+                    binding.btnStampStart.setBackgroundResource(R.drawable.btn_disable_semi_round)
+                    binding.btnStampEnd.isEnabled = true
+                    binding.btnStampEnd.setBackgroundResource(R.drawable.btn_main_semi_round)
+
+                }
+                else -> {
+                    binding.llStamp.visibility = View.GONE
+                    binding.flContainer.setBackgroundColor(context.getColor(R.color.gray_light))
+                }
+            }
         }
     }
 }

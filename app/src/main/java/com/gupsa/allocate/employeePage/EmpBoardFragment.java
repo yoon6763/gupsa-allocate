@@ -7,17 +7,15 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.google.firebase.Timestamp;
-import com.gupsa.allocate.adapter.CardAdapter;
+import com.gupsa.allocate.AllocationViewFragment;
+import com.gupsa.allocate.adapter.AllocateViewPagerAdapter;
 import com.gupsa.allocate.databinding.FragmentEmpBoardBinding;
-import com.gupsa.allocate.models.AllocationModel;
 
 import java.util.ArrayList;
 
+
 public class EmpBoardFragment extends Fragment {
-
-    private FragmentEmpBoardBinding binding;
-
+    FragmentEmpBoardBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,37 +29,24 @@ public class EmpBoardFragment extends Fragment {
 
         binding = FragmentEmpBoardBinding.inflate(inflater, container, false);
 
-        ArrayList<AllocationModel> cardList = new ArrayList<>();
-//        String company;
-//        String employee; // nullable
-//        String clientName;
-//        String clientCall;
-//        String locationStart;
-//        String locationEnd;
-//        Timestamp durationStart;
-//        Timestamp durationEnd;
-//        String status;
-//        int point;
-//        float weight;
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), Timestamp.now(), "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
-        cardList.add(new AllocationModel("Gupsa", "Gupsa", "Gupsa", "김대리", "01011112222","경기도 용인시 처인구 xxx", "충청남도 천안시 서북구 xxx", Timestamp.now(), null, "Gupsa", 100000, 1.0f));
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        String[] titles = new String[3];
+        titles[0] = "승인 완료";
+        titles[1] = "승인 전";
+        titles[2] = "요청 건";
+
+        for (int i = 0; i < 3; i++) {
+            fragments.add(new AllocationViewFragment());
+        }
+
+        ((AllocationViewFragment) fragments.get(0)).setEnableStampView(true);
 
 
-        CardAdapter cardAdapter = new CardAdapter(getContext(), cardList);
+        // 프래그먼트 안에서 프래그먼트를 사용할 때는 getChildFragmentManager() 를 사용해야 함
+        AllocateViewPagerAdapter viewPagerAdapter = new AllocateViewPagerAdapter(fragments, titles, getChildFragmentManager());
 
-        binding.rvCard.setAdapter(cardAdapter);
-        cardAdapter.notifyDataSetChanged();
+        binding.vpAllocation.setAdapter(viewPagerAdapter);
+        binding.tlAllocation.setupWithViewPager(binding.vpAllocation);
 
 
         return binding.getRoot();
