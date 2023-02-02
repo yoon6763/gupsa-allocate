@@ -13,9 +13,10 @@ import com.gupsa.allocate.databinding.FragmentEmpBoardBinding;
 
 import java.util.ArrayList;
 
-
 public class EmpBoardFragment extends Fragment {
-    FragmentEmpBoardBinding binding;
+
+    private FragmentEmpBoardBinding binding;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -27,27 +28,22 @@ public class EmpBoardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        binding = FragmentEmpBoardBinding.inflate(inflater, container, false);
+        binding = FragmentEmpBoardBinding   .inflate(inflater, container, false);
 
         ArrayList<Fragment> fragments = new ArrayList<>();
-        String[] titles = new String[3];
-        titles[0] = "승인 완료";
-        titles[1] = "승인 전";
-        titles[2] = "요청 건";
+        String[] titles = new String[2];
+        titles[0] = "단기 일정";
+        titles[1] = "장기 일정";
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             fragments.add(new AllocationViewFragment());
         }
-
-        ((AllocationViewFragment) fragments.get(0)).setEnableStampView(true);
-
 
         // 프래그먼트 안에서 프래그먼트를 사용할 때는 getChildFragmentManager() 를 사용해야 함
         AllocateViewPagerAdapter viewPagerAdapter = new AllocateViewPagerAdapter(fragments, titles, getChildFragmentManager());
 
         binding.vpAllocation.setAdapter(viewPagerAdapter);
         binding.tlAllocation.setupWithViewPager(binding.vpAllocation);
-
 
         return binding.getRoot();
     }

@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
     android:orientation="vertical"
-    tools:context=".employeePage.EmpHomeFragment">
+    tools:context=".employeePage.EmpMyAllocateFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
         android:elevation="1dp"
-        app:title="배차 신청" />
+        app:title="내 배차" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_allocation"
@@ -29,6 +28,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal" />
-
-
 </LinearLayout>

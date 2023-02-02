@@ -10,8 +10,8 @@ import com.gupsa.allocate.adminPage.AdmBoardFragment;
 import com.gupsa.allocate.adminPage.AdmHomeFragment;
 import com.gupsa.allocate.adminPage.AdmMypageFragment;
 import com.gupsa.allocate.databinding.ActivityMainBinding;
+import com.gupsa.allocate.employeePage.EmpMyAllocateFragment;
 import com.gupsa.allocate.employeePage.EmpBoardFragment;
-import com.gupsa.allocate.employeePage.EmpHomeFragment;
 import com.gupsa.allocate.employeePage.EmpMypageFragment;
 import com.gupsa.allocate.utils.Constants;
 import com.gupsa.allocate.utils.UserType;
@@ -54,16 +54,16 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // employee
 
-            getSupportFragmentManager().beginTransaction().add(R.id.container_main, new EmpHomeFragment()).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.container_main, new EmpBoardFragment()).commit();
 
             binding.navMain.setOnItemSelectedListener(item -> {
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new EmpHomeFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new EmpBoardFragment()).commit();
                         return true;
 
                     case R.id.nav_board:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new EmpBoardFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_main, new EmpMyAllocateFragment()).commit();
                         return true;
 
                     case R.id.nav_my_page:

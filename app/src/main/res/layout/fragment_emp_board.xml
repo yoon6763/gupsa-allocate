@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     android:orientation="vertical"
     tools:context=".employeePage.EmpBoardFragment">
 
@@ -12,7 +13,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
         android:elevation="1dp"
-        app:title="내 배차" />
+        app:title="배차 신청" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_allocation"
@@ -28,4 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal" />
+
+
 </LinearLayout>
