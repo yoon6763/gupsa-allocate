@@ -29,6 +29,7 @@ public class AllocateDetailActivity extends AppCompatActivity {
 
         // LinearLayout에 특정 idx의 ImageView를 가져와서 이미지를 변경
         ((ImageView) binding.llStatus.getChildAt(workState)).setImageDrawable(getDrawable(R.drawable.ic_truck_resize));
+
     }
 
 

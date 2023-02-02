@@ -18,7 +18,7 @@
             android:name=".ParentActivity"
             android:exported="false" />
         <activity
-            android:name=".IdSearchActivity"
+            android:name=".IdPwSearchActivity"
             android:exported="false" />
         <activity
             android:name=".SignupAdmActivity"
