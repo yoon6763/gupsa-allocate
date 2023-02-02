@@ -105,7 +105,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50sp"
-            android:background="@drawable/btn_main_square"
+            android:background="@drawable/btn_main_semi_round"
             android:text="비밀번호 찾기"
             android:layout_marginTop="50dp"/>
     </LinearLayout>

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 
 import com.gupsa.allocate.AllocationLogAllActivity;
+import com.gupsa.allocate.InfoModifyActivity;
 import com.gupsa.allocate.adapter.AllocationLogAdapter;
 import com.gupsa.allocate.databinding.FragmentEmpMypageBinding;
 import com.gupsa.allocate.models.AllocationLogModel;
@@ -32,6 +33,10 @@ public class EmpMypageFragment extends Fragment {
 
         binding.tvLogAll.setOnClickListener(v -> {
             startActivity(new Intent(getContext(), AllocationLogAllActivity.class));
+        });
+
+        binding.btnModify.setOnClickListener(v -> {
+            startActivity(new Intent(getContext(), InfoModifyActivity.class));
         });
 
         ArrayList<AllocationLogModel> allocationLogModels = new ArrayList<>();
