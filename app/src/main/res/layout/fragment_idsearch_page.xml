@@ -14,30 +14,30 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="20dp"
             android:text="이름"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et_user_name"
             android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginTop="5sp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/edittext_rounded"
             android:hint="이름을 입력해주세요"
             android:inputType="textPersonName"
-            android:textSize="15sp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/et_user_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="20dp"
             android:text="이메일"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:textStyle="bold" />
 
         <RelativeLayout
@@ -45,22 +45,22 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:layout_width="275sp"
-                android:layout_height="50sp"
+                android:layout_width="275dp"
+                android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edittext_rounded"
                 android:hint="이메일을 입력해주세요"
                 android:inputType="textPersonName"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <Button
-                android:layout_width="80sp"
-                android:layout_height="60sp"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="10sp"
+                android:layout_marginLeft="10dp"
                 android:text="인증번호 발송"
-                android:textSize="10sp"
+                android:textSize="10dp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -69,22 +69,22 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:layout_width="275sp"
-                android:layout_height="50sp"
+                android:layout_width="275dp"
+                android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edittext_rounded"
                 android:hint="인증코드를 입력해주세요"
                 android:inputType="textPersonName"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <Button
-                android:layout_width="80sp"
-                android:layout_height="60sp"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="10sp"
+                android:layout_marginLeft="10dp"
                 android:text="인증번호 확인"
-                android:textSize="10sp"
+                android:textSize="10dp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -98,12 +98,12 @@
                 android:layout_alignParentRight="true"
                 android:text="인증되었습니다"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="10dp"
                 android:textStyle="bold" />
         </RelativeLayout>
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50sp"
+            android:layout_height="50dp"
             android:background="@drawable/btn_main_semi_round"
             android:text="아이디 찾기"
             android:layout_marginTop="50dp"/>

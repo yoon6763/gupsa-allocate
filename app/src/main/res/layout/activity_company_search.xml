@@ -11,22 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="20sp">
+        android:layout_margin="20dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_arrow_signup"
-            android:layout_width="30sp"
-            android:layout_height="30sp"
-            android:background="@drawable/arrow_back_black"/>
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_arrow"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="회사 검색"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="3sp"
-            android:layout_marginLeft="5sp"/>
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -40,21 +40,21 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50sp"
+                android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edittext_rounded"
                 android:hint="회사 명을 입력해주세요"
                 android:inputType="textPersonName"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="25sp"
-                android:layout_height="25sp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10sp"
-                android:background="@drawable/search_icon" />
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_search" />
         </RelativeLayout>
         <ListView
             android:id="@+id/company_listview"

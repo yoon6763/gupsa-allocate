@@ -10,22 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="20sp">
+        android:layout_margin="20dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_arrow_signup"
-            android:layout_width="30sp"
-            android:layout_height="30sp"
-            android:background="@drawable/arrow_back_black"/>
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_arrow"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="회원 정보 수정"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="3sp"
-            android:layout_marginLeft="5sp"/>
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,43 +35,43 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="20dp"
             android:text="비밀번호"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginTop="5sp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/edittext_rounded"
             android:hint="비밀번호를 입력해주세요"
             android:inputType="textPersonName"
-            android:textSize="15sp" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="20dp"
             android:text="비밀번호 확인"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginTop="5sp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/edittext_rounded"
             android:hint="비밀번호를 한번 더 입력해주세요"
             android:inputType="textPersonName"
-            android:textSize="15sp" />
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/btn_authenticate"
             android:layout_width="match_parent"
-            android:layout_height="50sp"
+            android:layout_height="50dp"
             android:background="@drawable/btn_main_semi_round"
             android:text="인증하기"
             android:layout_marginTop="50dp"/>

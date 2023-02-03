@@ -20,6 +20,6 @@
         android:layout_height="25dp"
         android:layout_weight=".15"
         android:layout_marginStart="5dp"
-        android:src="@drawable/arrow_down" />
+        android:src="@drawable/ic_expand" />
 
 </LinearLayout>

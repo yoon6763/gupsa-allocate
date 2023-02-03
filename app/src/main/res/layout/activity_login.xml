@@ -24,16 +24,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="20sp"
+            android:paddingBottom="20dp"
             android:text="Allocate"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="40dp"
             android:textStyle="bold" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="-13sp">
+            android:layout_marginBottom="-13dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
+            android:layout_marginBottom="20dp"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -68,7 +68,7 @@
             android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
+            android:layout_marginBottom="20dp"
             android:ems="10"
             android:inputType="textPassword" />
 
@@ -76,7 +76,7 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
+            android:layout_marginBottom="20dp"
             android:background="#0075FF"
             android:gravity="center"
             android:text="로그인"
@@ -91,12 +91,6 @@
             android:text="회원가입"
             android:textColor="#0075FF" />
 
-
-        <!--<TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="아이디 혹은 비밀번호를 잊으셨나요?"
-            android:gravity="center"/>-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_sarch"

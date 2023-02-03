@@ -57,23 +57,23 @@ public class SignupAdmActivity extends AppCompatActivity {
         spinner01.setAdapter(adapter);
 
         // 스피너 클릭 리스너
-        spinner01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        /*spinner01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // 어댑터에서 정의한 메서드를 통해 스피너에서 선택한 아이템의 이름을 받아온다
                 selectedItem = adapter.getItem();
-                Toast.makeText(SignupAdmActivity.this, "선택한 아이템 : " + selectedItem, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(SignupAdmActivity.this, "선택한 아이템 : " + selectedItem, Toast.LENGTH_SHORT).show();
                 // 어댑터에서 정의하는 게 귀찮다면 아래처럼 구할 수도 있다
                 // getItemAtPosition()의 리턴형은 Object이므로 String 캐스팅이 필요하다
-                String otherItem = (String) spinner01.getItemAtPosition(position);
-                Log.e(TAG, "getItemAtPosition() - 선택한 아이템 : " + otherItem);
+                //String otherItem = (String) spinner01.getItemAtPosition(position);
+                //Log.e(TAG, "getItemAtPosition() - 선택한 아이템 : " + otherItem);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 //
             }
-        });
+        });*/
 
         spinner02 = findViewById(R.id.spinner02);
 
@@ -87,7 +87,7 @@ public class SignupAdmActivity extends AppCompatActivity {
         spinner02.setAdapter(adapter);
 
         // 스피너 클릭 리스너
-        spinner02.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        /*spinner02.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // 어댑터에서 정의한 메서드를 통해 스피너에서 선택한 아이템의 이름을 받아온다
@@ -103,7 +103,7 @@ public class SignupAdmActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
                 //
             }
-        });
+        });*/
 
         spinner03 = findViewById(R.id.spinner03);
 
@@ -117,7 +117,7 @@ public class SignupAdmActivity extends AppCompatActivity {
         spinner03.setAdapter(adapter);
 
         // 스피너 클릭 리스너
-        spinner03.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        /*spinner03.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // 어댑터에서 정의한 메서드를 통해 스피너에서 선택한 아이템의 이름을 받아온다
@@ -133,7 +133,7 @@ public class SignupAdmActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
                 //
             }
-        });
+        });*/
 
     }
 }

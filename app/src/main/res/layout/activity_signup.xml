@@ -15,60 +15,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/translucent_logo"
-        android:layout_margin="20sp"
+        android:layout_margin="20dp"
         android:layout_marginLeft="35sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_arrow_signup"
-        android:layout_width="30sp"
-        android:layout_height="30sp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/arrow_back"
-        android:layout_margin="10sp" />
+        android:layout_margin="10dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="30sp">
+        android:layout_margin="30dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="가입할 계정 유형을 선택해주세요"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_marginTop="40sp"
+            android:layout_marginTop="40dp"
             android:layout_gravity="center"
             />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_emp_signup"
-            android:layout_width="300sp"
-            android:layout_height="210sp"
+            android:layout_width="300dp"
+            android:layout_height="210dp"
             android:background="@drawable/round_button"
             android:drawableTop="@drawable/person_icon"
             android:text="직원"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="#000000"
             android:textStyle="bold"
-            android:layout_marginTop="40sp"
-            android:layout_marginBottom="50sp"
-            android:padding="40sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="50dp"
+            android:padding="40dp"
             android:layout_gravity="center"
             />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_adm_signup"
-            android:layout_width="300sp"
-            android:layout_height="210sp"
+            android:layout_width="300dp"
+            android:layout_height="210dp"
             android:background="@drawable/round_button"
             android:drawableTop="@drawable/apartment_icon"
             android:text="회사"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="#000000"
             android:textStyle="bold"
-            android:padding="40sp"
+            android:padding="40dp"
             android:layout_gravity="center"
             />
 
